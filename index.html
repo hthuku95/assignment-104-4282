@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .chess-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .chess-board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            width: 480px;
+            height: 480px;
+            border: 4px solid #8B4513;
+            border-radius: 10px;
+            margin: 0 auto;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .chess-square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            user-select: none;
+        }
+
+        .chess-square.light {
+            background-color: #f0d9b5;
+        }
+
+        .chess-square.dark {
+            background-color: #b58863;
+        }
+
+        .chess-square:hover {
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+            transform: scale(0.95);
+        }
+
+        .chess-square.selected {
+            background-color: #7fb069 !important;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .chess-square.valid-move {
+            background-color: #90EE90 !important;
+            box-shadow: inset 0 0 15px rgba(0, 128, 0, 0.5);
+        }
+
+        .chess-square.in-check {
+            background-color: #ff6b6b !important;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.5); }
+            50% { box-shadow: inset 0 0 30px rgba(255, 0, 0, 0.8); }
+            100% { box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.5); }
+        }
+
+        .chess-piece {
+            transition: transform 0.2s ease;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .chess-piece:hover {
+            transform: scale(1.1);
+        }
+
+        .game-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text
