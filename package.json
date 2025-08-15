@@ -1,0 +1,37 @@
+{
+  "name": "vanilla-chess-game",
+  "version": "1.0.0",
+  "description": "A playable chess game built with vanilla JavaScript and styled with Bootstrap",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "dev": "live-server --port=3000 --watch=.",
+    "build": "echo 'No build process needed for vanilla JS'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "chess",
+    "game",
+    "vanilla-javascript",
+    "bootstrap",
+    "browser-game"
+  ],
+  "author": "Chess Game Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/vanilla-chess-game.git"
+  },
+  "homepage": "https://github.com/username/vanilla-chess-game#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
