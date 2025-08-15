@@ -1,0 +1,10 @@
+This is an image file, not a code file. Image files contain binary data that cannot be represented as raw executable code text. 
+
+For a chess game, you would need an actual PNG image file of a black pawn chess piece sprite. This would typically be:
+
+1. A small PNG image (e.g., 64x64 or 80x80 pixels)
+2. A black-colored pawn chess piece
+3. Transparent background for proper rendering on the chessboard
+4. Clean, recognizable chess piece design
+
+You'll need to obtain or create this image file using image editing software or download it from a chess piece sprite collection. The file should be placed in the `assets/pieces/` directory as `black-pawn.png`.
